@@ -1,4 +1,4 @@
-Package: unicode
+Package: icu
 Type: Package
 Title: Unicode Text Processing
 Version: 0.0

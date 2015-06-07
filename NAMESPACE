@@ -2,5 +2,5 @@
 
 export(get_native_enc)
 export(stri_length)
-useDynLib(unicode,R_get_native_enc)
-useDynLib(unicode,R_stri_length)
+useDynLib(icu,R_get_native_enc)
+useDynLib(icu,R_stri_length)

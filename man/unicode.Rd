@@ -10,6 +10,9 @@ get_native_enc()
 
 stri_length(x)
 }
+\arguments{
+\item{x}{a character vector}
+}
 \description{
 Functions to manage and manipulate unicode strings.
 }
@@ -18,7 +21,7 @@ Functions to manage and manipulate unicode strings.
 unicode::get_native_enc()
 utils::localeToCharset()
 # Count length of strings
-x <- c("Paris", "Zürich", "東京")
+x <- c("Paris", "Zürich", "\\346\\235\\261\\344\\272\\254")
 unicode::stri_length(x)
 base::nchar(x)
 }

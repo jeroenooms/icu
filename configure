@@ -1,0 +1,19 @@
+# Default makevars is for OSX
+ISMAC=`uname | grep "Darwin"`
+
+if [ "$ISMAC" ]; then
+  exit 0
+fi
+
+# On Linux/Solaris we use pkg-config
+ICU_CFLAGS=`pkg-config --cflags icu-i18n`
+ICU_LIBS=`pkg-config --libs icu-i18n`
+
+if [ "$ICU_CFLAGS" ]; then
+  echo "PKG_CPPFLAGS= $ICU_CFLAGS" > src/Makevars
+  echo "PKG_LIBS= $ICU_LIBS" >> src/Makevars
+  exit 0
+else
+  echo "Could not find ICU. Please install libicu-dev (deb) or libicu-devel (rpm) or libicu_dev (opencsw)."
+  exit 1
+fi

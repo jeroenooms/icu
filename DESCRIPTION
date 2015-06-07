@@ -1,0 +1,14 @@
+Package: unicode
+Type: Package
+Title: Unicode Text Processing
+Version: 0.0
+Date: 2015-06-06
+Authors@R: c(
+    person("Jeroen", "Ooms", , "jeroen.ooms@stat.ucla.edu", role = c("cre", "aut")),
+    person("Marek", "Gagolewski", role = "ctb"),
+    person("Bartek", "Tartanus", role = "ctb")
+    )
+Description: Bindings to ICU4C for unicode string processing and regular expressions.
+    The package is written in C and borrows some code from the 'stringi' package. It
+    uses the system version of libicu; no third party libraries are bundled.
+License: MIT + file LICENSE

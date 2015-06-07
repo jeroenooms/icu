@@ -1,0 +1,6 @@
+# Apple does not include ICU headers with OSX but we can get them from
+# http://www.opensource.apple.com/source/ICU/ICU-531.30/. The makefile
+# for libicucore.dynlib uses --with-data-packaging=archive to put the
+# ICU data tables in a standalone file /usr/share/icu/icudt51l.dat
+PKG_CPPFLAGS=-Iapple -DU_DISABLE_RENAMING=1
+PKG_LIBS=-licucore

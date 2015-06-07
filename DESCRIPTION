@@ -12,3 +12,4 @@ Description: Bindings to ICU4C for unicode string processing and regular express
     The package is written in C and borrows some code from the 'stringi' package. It
     uses the system version of libicu; no third party libraries are bundled.
 License: MIT + file LICENSE
+Encoding: UTF-8
